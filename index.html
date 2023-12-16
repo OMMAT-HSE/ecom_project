@@ -195,13 +195,51 @@
 								<h2>Заказ</h2>
 								<h3>Успейте получить <b>скидку 15%</b> на первый заказ!</h3>
 							</header>
-							<footer class="major">
-								<ul class="actions special">
-									<li><a href="generic.html" class="button primary large">Сделать заказ</a></li>
-								</ul>
-							</footer>
+							
+							<form method="post" action="#">
+								<div class="row gtr-uniform">
+									<div class="col-6 col-12-xsmall">
+										<input style="margin: 15px" type="text" name="demo-name" id="demo-name" value="" placeholder="Имя" />
+										<input style="margin: 15px" type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input style="margin: 15px" type="text" name="demo-name" id="demo-name" value="" placeholder="Телефон" />
+										<select style="margin: 15px" name="demo-category" id="demo-category">
+											<option value="">Размер 42х30 см</option>
+											<option value="1">Размер 50х50</option>
+											<option value="2">Размер 60х60</option>
+										</select>
+									</div>
+									
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Самовывоз</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-normal" name="demo-priority">
+										<label for="demo-priority-normal">Нужна доставка (адрес можно указать в поле ниже)</label>
+									</div>
+									
+									<div class="col-12">
+										<input type="file" id="fileUpload" name="fileUpload">
+									</div>
+									
+									<div class="col-12">
+										<textarea name="demo-message" id="demo-message" placeholder="Ваши пожелания к портрету" rows="6"></textarea>
+									</div>
+									
+									<div class="col-12">
+										<p>Мы обязательно свяжемся с Вами по указанным контактным данным для уточнения макета портрета и согласования деталей доставки!</p>
+									</div>
+									<div class="col-12">
+										<ul class="actions special">
+											<li><a href="submit" class="button primary large">Сделать заказ</a></li>
+										</ul>
+									</div>
+								</div>
+							</form>
 						</section>
-
+						
 						<!-- Get Started -->
 							<section id="cta" class="main ">
 								<header class="major special">
@@ -260,7 +298,7 @@
 						<p class="copyright">&copy; OMMAT. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
-			</div>
+			</div>	
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
