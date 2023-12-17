@@ -203,7 +203,7 @@
 								<h3>Успейте получить <b>скидку 15%</b> на первый заказ!</h3>
 							</header>
 							
-							<form method="post" action="#" onsubmit="succesed(this)">
+							<form method="post" action="#" onsubmit="event.preventDefault(); succesed(this);">
 								<div class="row gtr-uniform">
 									<div class="col-6 col-12-xsmall">
 										<input style="margin: 15px" type="text" name="demo-name" id="demo-name" value="" placeholder="Имя *" required>
