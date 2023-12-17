@@ -12,6 +12,12 @@
 		<!-- Yandex.Metrika counter --> 
 		<script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(95885430, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/95885430" style="position:absolute; left:-9999px;" alt="" /></div></noscript> 
 		<!-- /Yandex.Metrika counter -->
+		
+		<script>
+		function succesed(f) {
+			alert('Спасибо за Ваш заказ!\nНаш менеджер свяжется с Вами в ближайшее время!');
+		   }
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -49,11 +55,8 @@
 										</header>
 										<p>Принт ОММАТ делает нечто большее, чем просто фотокартины. Мы помогаем нашим заказчикам создавать их собственное произведение искусства.
 Качество — наша страсть, обеспечиваем его самыми лучшими материалами и ручной работой.</p>
-										<ul class="actions">
-											<li><a href="generic.html" class="button">Узнать больше</a></li>
-										</ul>
 									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" style="width: 25em;" /></span>
+									<span class="image"><img src="images/pic01.jpg" alt="" style="width: 23em;" /></span>
 								</div>
 							</section>
 
@@ -199,20 +202,27 @@
 								<h3>Успейте получить <b>скидку 15%</b> на первый заказ!</h3>
 							</header>
 							
-							<form method="post" action="#">
+							<form method="post" onsubmit="succesed(this)">
 								<div class="row gtr-uniform">
 									<div class="col-6 col-12-xsmall">
-										<input style="margin: 15px" type="text" name="demo-name" id="demo-name" value="" placeholder="Имя" />
-										<input style="margin: 15px" type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+										<input style="margin: 15px" type="text" name="demo-name" id="demo-name" value="" placeholder="Имя *" required>
+										<input style="margin: 15px" type="email" name="demo-email" id="demo-email" value="" placeholder="Email *" required>
+										<select style="margin: 15px" name="size" id="size">
+											<option value="">Поп-арт</option>
+											<option value="1">Исторический персонаж</option>
+											<option value="2">Кино-мем</option>
+										</select>
 									</div>
 									<div class="col-6 col-12-xsmall">
-										<input style="margin: 15px" type="text" name="demo-name" id="demo-name" value="" placeholder="Телефон" />
+										<input style="margin: 15px" type="text" name="demo-name" id="demo-name" value="" placeholder="Телефон">
 										<select style="margin: 15px" name="demo-category" id="demo-category">
 											<option value="">Размер 42х30 см</option>
 											<option value="1">Размер 50х50 см</option>
 											<option value="2">Размер 60х60 см</option>
-										</select>
+										</select>										
+										<input style="margin: 15px" type="file" id="fileUpload" name="fileUpload" accept="image/png, image/jpeg" required>
 									</div>
+									
 									
 									<div class="col-4 col-12-small">
 										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
@@ -222,25 +232,21 @@
 										<input type="radio" id="demo-priority-normal" name="demo-priority">
 										<label for="demo-priority-normal">Нужна доставка (адрес можно указать в поле ниже)</label>
 									</div>
-									
+																		
 									<div class="col-12">
-										<input type="file" id="fileUpload" name="fileUpload">
-									</div>
-									
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Ваши пожелания к портрету" rows="6"></textarea>
+										<input type="checkbox" id="baget" name="baget">
+										<label for="baget">Нужна багетная рама (по Вашему желанию 😊)</label>
+										<textarea name="demo-message" id="demo-message" placeholder="Ваши пожелания к портрету, комментарии к заказу" rows="6"></textarea>
 									</div>
 									
 									<div class="col-12">
 										<p>Мы обязательно свяжемся с Вами по указанным контактным данным для уточнения макета портрета и согласования деталей доставки!</p>
 									</div>
 									<div class="col-12">
-										<ul class="actions special">
-											<li><a href="submit" class="button primary large">Сделать заказ</a></li>
-										</ul>
-									</div>
+										<button type="submit" class="button primary large">Сделать заказ</button>
+									</div>									
 								</div>
-							</form>
+							</form>							
 						</section>
 						
 						<!-- Get Started -->
@@ -251,10 +257,7 @@
 								<h2>Принт ОММАТ — Профессиональная печать фото на холсте</h2>
 								<p>Принт ОММАТ делает нечто большее, чем просто фотокартины. Мы помогаем нашим заказчикам создавать их собственное произведение искусства.
 Качество — наша страсть, обеспечиваем его самыми лучшими материалами и ручной работой.</p>
-								<!--center>
-									<img src="images/company.jpg" alt="" style="width: 40em;"/>
-								</center-->
-								
+																
 								<h3><b>За нашими плечами:</b></h3>
 								<ul class="content">
 									<li>15 лет безупречной работы в печатной сфере (полиграфия, широкоформатная интерьерная печать)</li>
@@ -268,7 +271,7 @@
 									<li>Фотоколлажи</li>
 									<li>Композиции из картин (фотостены)</li>
 									<li>Модульные картины</li>
-									<li>Диджитал-портреты: DreamART, GrungeART, FreshART, LightART. Портреты в стиле акварель или под масляную живопись</li>
+									<li>Диджитал-портреты: Поп-арт, Исторический персонаж, Кино-мем. Портреты в стиле акварель или под масляную живопись</li>
 								</ul>
 							</section>
 					</div>
