@@ -16,6 +16,14 @@
 		<script>
 		function succesed(f) {
 			alert('Спасибо за Ваш заказ!\nНаш менеджер свяжется с Вами в ближайшее время!');
+			
+			document.getElementById('demo-name').value = '';
+			document.getElementById('demo-email').value = '';
+			document.getElementById('demo-phone').value = '';
+			document.getElementById('baget').checked = false;
+			document.getElementById('demo-message').value = '';
+			document.getElementById('fileUpload').value = '';
+			
 			return false;
 		   }
 		</script>
@@ -208,15 +216,15 @@
 									<div class="col-6 col-12-xsmall">
 										<input style="margin: 15px" type="text" name="demo-name" id="demo-name" value="" placeholder="Имя *" required>
 										<input style="margin: 15px" type="email" name="demo-email" id="demo-email" value="" placeholder="Email *" required>
-										<select style="margin: 15px" name="size" id="size">
+										<select style="margin: 15px" name="style" id="style">
 											<option value="">Поп-арт</option>
 											<option value="1">Исторический персонаж</option>
 											<option value="2">Кино-мем</option>
 										</select>
 									</div>
 									<div class="col-6 col-12-xsmall">
-										<input style="margin: 15px" type="text" name="demo-name" id="demo-name" value="" placeholder="Телефон">
-										<select style="margin: 15px" name="demo-category" id="demo-category">
+										<input style="margin: 15px" type="text" name="demo-phone" id="demo-phone" value="" placeholder="Телефон">
+										<select style="margin: 15px" name="size" id="size">
 											<option value="">Размер 42х30 см</option>
 											<option value="1">Размер 50х50 см</option>
 											<option value="2">Размер 60х60 см</option>
